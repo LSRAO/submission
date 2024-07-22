@@ -97,6 +97,8 @@ submission/
 * Fine-tune the OpenAI model with domain-specific data.
 * Implement advanced text preprocessing techniques.
 * Use a more sophisticated chunking strategy that considers context boundaries.
+* Use RAG pipeline for efficient and accurate search.
+* Using Hybrid search from vectordbs.
   
 ### Code Quality Improvements
 
