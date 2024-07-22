@@ -12,7 +12,7 @@ load_dotenv()
 
 # Load environment variables
 OPENAI_API_KEY = os.getenv("OPENAI_API_KEY")
-print(OPENAI_API_KEY)
+# print(OPENAI_API_KEY)
 SLACK_API_TOKEN = os.getenv("SLACK_API_TOKEN")
 SLACK_CHANNEL = os.getenv("SLACK_CHANNEL")
 PDF_PATH = input("Path to input file:")#os.getenv("PDF_PATH")

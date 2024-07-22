@@ -56,7 +56,7 @@ This project aims to create an AI agent that leverages the capabilities of a lar
    ```
 2. Run the main script:
    ```sh
-   python src/main.py
+   python main.py
    ```
 
 ### Example
@@ -67,7 +67,7 @@ To answer the question "What is the name of the company?" based on the content o
 python main.py
 ```
 
-Enter the File Path for the PDF, followed by the question that needs to be answered.
+Enter the File Path for the PDF, followed by the questions that needs to be answered.
 Output will be An updated JSON file with 
 
 ### Project Structure
@@ -98,7 +98,7 @@ submission/
 * Implement advanced text preprocessing techniques.
 * Use a more sophisticated chunking strategy that considers context boundaries.
   
-###Code Quality Improvements
+### Code Quality Improvements
 
 * Modularize the code further by separating concerns into different modules.
 * Implement logging for better debugging and monitoring.
