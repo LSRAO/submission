@@ -1,1 +1,14 @@
-{"Question": "What is their vacation policy?", "Answer": "7.7 Vacation\n\nEmployees at Zania, Inc. are entitled to vacation time based on their length of service with the company. The vacation policy outlines the accrual rate, maximum accrual limits, and scheduling procedures for taking time off. Specific details about how vacation time is earned, requested, approved, and carried over from year to year are provided in this section of the employee handbook."}
+[
+    {
+        "Question": "What is their vacation policy?",
+        "Answer": "7.7 Vacation\n\nEmployees are eligible for vacation time based on their length of service with the Company. Vacation time is accrued on a pro-rata basis each pay period. Employees must request vacation time in advance and receive approval from their supervisor. The Company reserves the right to deny vacation requests based on business needs. Unused vacation time may be carried over into the next year, up to a maximum limit specified by the Company. Upon termination of employment, employees will be paid for any unused vacation time in"
+    },
+    {
+        "Question": "Who is the CEO of the company?",
+        "Answer": "The CEO of Zania, Inc. is Shruti Gupta."
+    },
+    {
+        "Question": "What is the name of the company?",
+        "Answer": "The name of the company is Zania, Inc."
+    }
+]
