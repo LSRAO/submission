@@ -10,5 +10,13 @@
     {
         "Question": "What is the name of the company?",
         "Answer": "The name of the company is Zania, Inc."
+    },
+    {
+        "Question": "What is the name of the company?",
+        "Answer": "The name of the company is Zania, Inc."
+    },
+    {
+        "Question": "Who is the CEO of the company?",
+        "Answer": "Shruti Gupta is the CEO of Zania, Inc."
     }
 ]
