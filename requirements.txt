@@ -1,0 +1,6 @@
+openai
+slack_sdk
+transformers
+PyMuPDF
+nltk
+python-dotenv
