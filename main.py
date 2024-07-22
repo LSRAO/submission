@@ -46,6 +46,7 @@ def main(questions):
         slack_client.send_message(f"Quesion:{QUESTION} \n Answer:{answer}")
 
 if __name__ == "__main__":
+    # For takin list of questions from user.
     questions = []
     print("Enter your questions. Type 'done' when you are finished.\n")
     

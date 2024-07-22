@@ -2,6 +2,8 @@ import os
 from slack_sdk import WebClient
 from slack_sdk.errors import SlackApiError
 
+
+# Slack Client for sending messages in slack from bot.
 class SlackClient:
     def __init__(self, token, channel):
         self.client = WebClient(token=token)

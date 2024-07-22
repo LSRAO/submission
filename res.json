@@ -18,5 +18,9 @@
     {
         "Question": "Who is the CEO of the company?",
         "Answer": "Shruti Gupta is the CEO of Zania, Inc."
+    },
+    {
+        "Question": "Is there any Drug and Alcohol policy?",
+        "Answer": "Yes, there is a Drug and Alcohol policy mentioned in the Zania, Inc. Employee Handbook under the section \"Safety and Loss Prevention.\" This policy is outlined in section 8.1 of the handbook."
     }
 ]

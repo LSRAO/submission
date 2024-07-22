@@ -9,33 +9,7 @@ class OpenAIAgent:
             api_key=api_key
         )
 
-    def ask_question(self, question, context):
-
-        response = self.client.chat.completions.create(
-            model="gpt-3.5-turbo-0125",
-            messages=[
-                {"role": "system", "content": "You are a helpful assistant."},
-                {"role": "user", "content": f"Context: {context}"},
-                {"role": "user", "content": f"Question: {question}"},
-                {"role": "system", "content": "Answer: "}
-            ],
-            max_tokens=100,
-            temperature=0.9,
-            top_p=0.7
-
-        )
-        response_message = response.choices[0].message.content
-        # print(response_message)
-        return response_message
-
-    # def ask_question_in_chunks(self, question, context, chunk_size=512):
-    #     chunks = [context[i:i + chunk_size] for i in range(0, len(context), chunk_size)]
-    #     responses = []
-    #     for chunk in chunks:
-    #         response = self.ask_question(question, chunk)
-    #         responses.append(response)
-
-    #     return "".join(min(responses, key=responses.count))
+    # Funciton to divide text in chunks
     def chunk_text(self, text, max_chunk_size=512, overlap=10):
         sentences = nltk.sent_tokenize(text)
         chunks = []
@@ -57,7 +31,8 @@ class OpenAIAgent:
             overlapped_chunks.append(" ".join(chunks[start:end]))
         # print(len(overlapped_chunks[-1]))
         return overlapped_chunks
-
+    
+    # Function to extract keywords from Question.
     def extract_keywords(self, prompt):
         response = self.client.chat.completions.create(
             model="gpt-3.5-turbo-0125",
@@ -68,6 +43,7 @@ class OpenAIAgent:
             )
         return response.choices[0].message.content.strip().split(' ')
 
+    # Function to find the relevant chunks from all the chunks, by keyword  mathcing.
     def find_relevant_chunks(self, chunks, keywords):
         relevant_chunks = []
         for chunk in chunks:
@@ -75,6 +51,7 @@ class OpenAIAgent:
                 relevant_chunks.append(chunk)
         return relevant_chunks
 
+    # To invoke model for each chunk
     def query_model_for_chunks(self, prompt, chunks):
         answers = []
         for chunk in chunks:
@@ -89,6 +66,8 @@ class OpenAIAgent:
             )
             answers.append(response.choices[0].message.content.strip())
         return answers
+    
+
     def select_best_response(self, question, responses):
         best_response = None
         highest_relevance_score = 0
@@ -117,7 +96,6 @@ class OpenAIAgent:
         return relevance_score
 
     def ask_question_in_chunks(self, question, text):
-        # text = extract_text_from_pdf(pdf_path)
         chunks = self.chunk_text(text)
         keywords = self.extract_keywords(question)
         relevant_chunks = self.find_relevant_chunks(chunks, keywords)
